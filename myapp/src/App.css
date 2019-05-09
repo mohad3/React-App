@@ -1,0 +1,130 @@
+
+.App {
+  width: 100%;
+  height: 100%;
+}
+
+.loginbox{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  width: 350px;
+  height: 420px;
+  padding: 80px 40px;
+  box-sizing: border-box;
+  background: rgba(0,0,0,.5);  
+  border-radius: 10px;
+}
+.loginboxsu{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  width:420px;
+  height: 650px;
+  padding: 80px 40px;
+  box-sizing: border-box;
+  background: rgba(0,0,0,.5);  
+  border-radius: 10px;
+}
+.user{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  top: calc(-100px/2);
+  left: calc(50% - 50px);
+} 
+h2{
+  margin : 0;
+  padding: 0 0 20px;
+  color: #feb236;
+  text-align: center;
+}
+.loginbox p{
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  color: #fff;
+}
+.loginbox input{
+  width: 100%;
+  margin-bottom: 20px;
+
+}
+.loginbox input[type="text"],
+.loginbox input[type="password"]{
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color: #fff;
+  font-size: 16px;
+}
+::placeholder{
+  color: rgba(255,255,255,.5)
+}
+.loginbox input[type="submit"]{
+  border: none;
+  outline: none;
+  height: 40px;
+  color: #fff;
+  font-size: 16px;
+  background: #fffeb236;
+  cursor: pointer;
+  border-radius: 20px;
+}
+.loginbox input[type="submit"]:hover{
+  background: #feb236;
+  color: #262626;
+}
+.loginbox a{
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  padding-bottom: 10px;
+}
+.loginboxsu p{
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  color: #fff;
+}
+.loginboxsu input{
+  width: 100%;
+  margin-bottom: 20px;
+  margin-top: 5px;
+}
+.loginboxsu input[type="text"],
+.loginboxsu input[type="password"]{
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color: #fff;
+  font-size: 16px;
+}
+::placeholder{
+  color: rgba(255,255,255,.5)
+}
+.loginboxsu input[type="submit"]{
+  border: none;
+  outline: none;
+  height: 40px;
+  color: #fff;
+  font-size: 16px;
+  background: #fffeb236;
+  cursor: pointer;
+  border-radius: 20px;
+}
+.loginboxsu input[type="submit"]:hover{
+  background: #feb236;
+  color: #262626;
+}
+
+
