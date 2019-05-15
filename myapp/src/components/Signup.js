@@ -1,11 +1,12 @@
 import React from 'react'
 import '../App.js'
+import signup from '../image/signup.png'
 class Signup extends React.Component {
   render () {
     return (
 
       <div class='loginboxsu'>
-        <img src='https://cdn0.iconfinder.com/data/icons/user-collection-4/512/add_user-512.png' class='user' />
+        <img src={signup} class='user' />
         <h2>Sign Up Here</h2>
         <div>
           <p>firstname</p>

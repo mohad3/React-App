@@ -1,21 +1,39 @@
-var validateObject = {
+const validateObject = {
   firstname: {
     presence: {
-      message: '^please enter your first name.'
+      message: '^Please enter your first name.'
     },
     length: {
-      minimun: 3,
-      message: '^Your name must be at least 2 character.'
+      minimum: 3,
+      message: '^Your name must be at least 3 characters.'
     }
   },
   lastname: {
     presence: {
-      message: '^please enter your first name.'
+      message: '^Please enter your last name.'
     },
     length: {
-      minimun: 3,
-      message: '^Your name must be at least 2 character.'
+      minimum: 3,
+      message: '^Your last name must be at least 3 characters.'
+    }
+  },
+  'email': {
+    presence: {
+      message: '^Please enter your email.'
+    },
+    email: {
+      message: '^Please enter a valid email.'
+    }
+  },
+  password: {
+    presence: {
+      message: '^Please enter a password.'
+    },
+    length: {
+      minimum: 4,
+      message: '^Your password must be at least 4 characters.'
     }
   }
-
 }
+
+export default validateObject
