@@ -1,5 +1,5 @@
 import React from 'react'
-import profile from '../image/profile.png'
+import profile2 from '../image/profile2.png'
 import ChatScreen from './ChatScreen'
 import Footer from './Footer'
 
@@ -20,8 +20,8 @@ export default class Chat extends React.Component {
     return (
       <div className='d2'>
         <div className='header'>
-          <img src={profile} style={{ width: '30px', margin: '0 5px' }} />
-          <span> zahra </span>
+          <img src={profile2} style={{ width: '30px', margin: '0 5px' }} />
+          <h2> zahra </h2>
         </div>
 
         <ChatScreen newMessage={this.state.newMessage} />

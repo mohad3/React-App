@@ -72,6 +72,7 @@ class Signup extends React.Component {
             { this.state.error.password !== null &&
             <p style={{ color: 'red' }}>{this.state.error.password}</p>
             }
+            <p>Retype password</p>
             <input
               type='password'
               name='retypepassword'

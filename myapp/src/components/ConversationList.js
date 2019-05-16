@@ -68,6 +68,9 @@ export default class ConversationList extends React.Component {
   render () {
     return (
       <div className='d1'>
+        <div className='logo'>
+          <h1>Welcome</h1>
+        </div>
         { this.state.conversationList.map((conversation, index) => {
           return (
             <Conversation
