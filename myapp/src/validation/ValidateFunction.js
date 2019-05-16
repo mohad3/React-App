@@ -1,4 +1,4 @@
-import validateObject from './validateObject.js'
+import ValidateObject from './ValidateObject.js'
 import validatejs from 'validate.js'
 
 export default function validate (fieldName, value) {
@@ -16,7 +16,7 @@ export default function validate (fieldName, value) {
   //                         }
   //                       }
   var formFields = {}
-  formFields[fieldName] = validateObject[fieldName]
+  formFields[fieldName] = ValidateObject[fieldName]
   // The formValues and validated against the formFields
   // the variable result hold the error messages of the field
   const result = validatejs(formValues, formFields)

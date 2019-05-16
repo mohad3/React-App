@@ -1,4 +1,4 @@
-const validateObject = {
+const ValidateObject = {
   firstname: {
     presence: {
       message: '^Please enter your first name.'
@@ -36,4 +36,4 @@ const validateObject = {
   }
 }
 
-export default validateObject
+export default ValidateObject

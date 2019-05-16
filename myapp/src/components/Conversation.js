@@ -8,16 +8,17 @@ export default class Conversation extends React.Component {
           <img src={profile} style={{ width: '30px' }} />
         </div>
         <div className='contentContainer'>
-          <div className='inf'>
+          <div className='inf1'>
             <span>
               {this.props.name}
             </span>
-            <span>2/3</span>
           </div>
-          <div className='inf'>
-            <span>
-              {this.props.latestMessage}
-            </span>
+          <div className='inf2'>
+            <div className='inf3'>
+              <span>
+                {this.props.unreadmessage}
+              </span>
+            </div>
             <span>
               {this.props.date}
             </span>
