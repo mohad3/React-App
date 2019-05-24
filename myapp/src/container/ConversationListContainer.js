@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import ChatScreen from '../components/ChatScreen'
+import ConversationList from '../components/ConversationList'
 
 const mapDispatchToProps = dispatch => ({
   dispatch: dispatch
@@ -8,14 +8,13 @@ const mapDispatchToProps = dispatch => ({
 const mapStateToProps = state => {
   console.log(state)
   return {
-    newMessage: state.newMessage,
-    messages: state.messages
+    conversationList: state.conversationList
   }
 }
 
-const ChatScreenContainer = connect(
+const ConversationListContainer = connect(
   mapStateToProps,
   mapDispatchToProps
-)(ChatScreen)
+)(ConversationList)
 
-export default ChatScreenContainer
+export default ConversationListContainer

@@ -2,6 +2,7 @@ import React from 'react'
 import '../App.js'
 import signup from '../image/signup.png'
 import validate from '../validation/ValidateFunction'
+import axios from 'axios'
 class Signup extends React.Component {
   constructor (props) {
     super(props)
@@ -31,7 +32,21 @@ class Signup extends React.Component {
     error.password = passwordError
     error.reTypePassword = retypepasswordError
     this.setState({ error })
-    this.setState({ ...this.state, error: { ...this.state.error, email: emailError, password: passwordError , reTypePassword: passwordError } })
+    this.setState({ ...this.state, error: { ...this.state.error, email: emailError, password: passwordError, reTypePassword: passwordError } })
+    console.log('states:::', this.state)
+    let data = {
+      email: this.state.email,
+      password: this.state.password
+    }
+    axios.post('https://api.paywith.click/auth/signup/', data)
+      .then(function (response) {
+        console.log('response::::', response)
+        window.localStorage.setItem('token', response.data.token)
+        window.localStorage.setItem('id', response.data.id)
+      })
+      .catch(function (error) {
+        console.log('error::::', error)
+      })
   }
   render () {
     return (
@@ -40,7 +55,7 @@ class Signup extends React.Component {
           <img src={signup} class='user' />
           <h2>Sign Up Here</h2>
           <div>
-            <p>firstname</p>
+            {/* <p>firstname</p>
             <input
               type='text'
               name=''
@@ -51,7 +66,7 @@ class Signup extends React.Component {
               type='text'
               name=''
               placeholder='choose an ID'
-            />
+            /> */}
             <p>Email</p>
             <input
               type='text'

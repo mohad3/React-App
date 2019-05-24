@@ -1,7 +1,7 @@
 import React from 'react'
-import profile2 from '../image/profile2.png'
-import ChatScreen from './ChatScreen'
-import Footer from './Footer'
+import ChatScreenContainer from '../container/ChatScreenContainer'
+import FooterContainer from '../container/FooterContainer'
+import HeaderContainer from '../container/HeaderContainer'
 
 export default class Chat extends React.Component {
   constructor () {
@@ -19,14 +19,11 @@ export default class Chat extends React.Component {
     console.log('state', this.state.newMessage)
     return (
       <div className='d2'>
-        <div className='header'>
-          <img src={profile2} style={{ width: '30px', margin: '0 5px' }} />
-          <h2> zahra </h2>
-        </div>
+        <HeaderContainer />
 
-        <ChatScreen newMessage={this.state.newMessage} />
+        <ChatScreenContainer newMessage={this.state.newMessage} />
 
-        <Footer getNewMessage={(newMessage) => this.getNewMessage(newMessage)} />
+        <FooterContainer getNewMessage={(newMessage) => this.getNewMessage(newMessage)} />
       </div>
     )
   }

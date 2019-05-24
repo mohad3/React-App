@@ -35,24 +35,40 @@ class Signin extends React.Component {
     // error.password = passwordError
     // this.setState({error})
     // this.setState({...this.state, error: {...this.state.error, email:emailError, password: passwordError}})
+    // var emailError = validate('email', this.state.email)
+    // var passwordError = validate('password', this.state.password)
+
+    // var error = {}
+    // error.email = emailError
+    // error.password = passwordError
+    // this.setState({error})
+    // this.setState({...this.state, error: {...this.state.error, email:emailError, password: passwordError}})
     console.log('states:::', this.state)
     let data = {
       email: this.state.email,
       password: this.state.password
     }
-    let rowdata = new FormData()
-    rowdata.append('email', this.state.email)
-    rowdata.append('password', this.state.password)
-    var headers = {
-      'Content-Type': 'application/json'
-    }
-    axios.post('https://api.paywith.click/auth/signin/', data, { headers: headers })
+    // let rowdata = new FormData()
+    // rowdata.append('email', this.state.email)
+    // rowdata.append('password', this.state.password)
+    // var headers = {
+    //   'Content-Type': 'application/json'
+    // }
+    axios.post('https://api.paywith.click/auth/signin/', data)
       .then(function (response) {
         console.log('response::::', response)
+        window.localStorage.setItem('token', response.data.data.token)
+        window.localStorage.setItem('id', response.data.data.profile.id)
       })
       .catch(function (error) {
         console.log('error::::', error)
       })
+    // this.setState({ clicked: !this.state.clicked })
+    // if (this.state.clicked === true) {
+    //   this.setState({ clicked: false })
+    // } else {
+    //   this.setState({ clicked: true })
+    // }
     // this.setState({ clicked: !this.state.clicked })
     // if (this.state.clicked === true) {
     //   this.setState({ clicked: false })
