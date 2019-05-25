@@ -4,6 +4,7 @@ import ConversationContainer from '../container/ConversationContainer'
 // import search from '../image/search.png'
 import axios from 'axios'
 import { saveConversationList } from '../action/Conversation'
+import { Link } from 'react-router-dom'
 
 export default class ConversationList extends React.Component {
   constructor (props) {
@@ -81,7 +82,14 @@ export default class ConversationList extends React.Component {
     return (
       <div className='d1'>
         <div className='logo'>
-          <h1>Welcome</h1>
+          <Link
+            className='welcome'
+            to='./'
+          >
+            <h1>
+            Welcome
+            </h1>
+          </Link>
         </div>
         <div className='search'>
           <input

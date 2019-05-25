@@ -269,15 +269,29 @@ h2{
   text-decoration: bold;
   padding-top: 15px;
 }
-
-
-.message {
-  background-color: #ec9939;
-  color: #fff;
+.welcome{
+  text-shadow: 3px 2px rgb(192, 134, 67);
+  color: #61340f;
+  text-decoration: bold;
+  padding-top: 15px;
+  text-decoration: none;
+}
+.smessage {
+  background-color: #be6602f6;
+  color: rgb(41, 27, 10);
   padding: 7px 10px;
   padding-bottom: 5px;
   margin: 8px;
-  border-radius: 0 10px 0 0;
+  border-radius: 10px;
+ 
+}
+.rmessage {
+  background-color: #ffa600f8;
+  color: rgb(70, 34, 2);
+  padding: 7px 10px;
+  padding-bottom: 5px;
+  margin: 8px;
+  border-radius: 10px;
  
 }
 .receiver{
@@ -347,7 +361,7 @@ h1{
 } */
 .search{
   /* flex: 5; */
-  height: 5vh;
+  /* height: 5vh; */
   /* display: flex; */
   /* flex-direction: row; */
   /* justify-content: space-around; */
@@ -384,7 +398,7 @@ h1{
   margin: 0;
   padding: 5px 20px;
   border-bottom: 1px solid #914f1a;
-  background-color: #613606;
+  background-color: #8d5604;
   z-index: -1;
   border-radius: 20px;
   cursor: pointer;

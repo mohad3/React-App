@@ -116,11 +116,12 @@ class Signin extends React.Component {
             >
             sign up
             </Link>
-            <a
-              href='https://google.com'
+            <Link
+              className='submit link'
+              to='./massenger'
             >
-          Forget Password
-            </a>
+            MASSENGER
+            </Link>
           </div>
         </div>
       </div>

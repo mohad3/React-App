@@ -18,13 +18,13 @@ export default class ChatScreen extends React.Component {
             if (item.sender.id == this.state.myId) {
               return (
                 <div className='sender'>
-                  <span className='message'>{item.text}</span>
+                  <span className='smessage'>{item.text}</span>
                 </div>
               )
             } else {
               return (
                 <div className='receiver'>
-                  <span className='message'>{item.text}</span>
+                  <span className='rmessage'>{item.text}</span>
                 </div>
 
               )

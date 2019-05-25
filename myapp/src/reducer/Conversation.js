@@ -5,13 +5,22 @@ const INIT = {
   user: '',
   chatid: ''
 }
-
+var myID = window.localStorage.getItem('id')
 function conversation (state = INIT, action) {
   switch (action.type) {
     case 'SAVE_NEW_MESSAGE':
       return { ...state,
         newMessage: action.payload,
-        // messages: [...state.messages, { id: 1, message: action.payload }]
+        messages:
+        [...state.messages,
+          {
+            sender: {
+              id: myID
+            },
+            text: action.payload
+          }
+        ]
+
       }
     case 'SAVE_CONVERSATION_LIST':
       return {
